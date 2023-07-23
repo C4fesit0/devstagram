@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\User;
 
 class RegisterController extends Controller
 {
@@ -16,7 +17,14 @@ class RegisterController extends Controller
             'name' => 'required |min:5',
             'username'=> 'required|unique:users|min:3|max:30',
             'email'=>'required|unique:users|email|max:60',
-            'passord'=>'required|confirmed|min:6',
+            'password'=>'required|confirmed|min:6',
+        ]);
+        User::create([
+            'name'=>$request->name,
+            'username'=>$request->username,
+            'email'=>$request->email,
+            'password'=>$request->password,
         ]);
     }
+
 }
