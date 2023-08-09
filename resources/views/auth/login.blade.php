@@ -46,6 +46,11 @@
                     @enderror
                 </div>
 
+                <div class="mb-5">
+
+                    <input type="checkbox" id="remember" name="remember"/><label for="remember" class="m-2 text-gray-500 font-bold" >Recordarme</label>
+                </div>
+
                 <input type="submit" value="Iniciar Sesion"
                 class="bg-sky-600 text-center hover:bg-sky-700
                 transition-colors cursor-pointer uppercase font-bold w-full p-3
