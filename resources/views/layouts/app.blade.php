@@ -11,6 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
     </head>
     <body class="bg-gray-100">
         <header class="p-5 border-b bg-white shadow ">
@@ -20,7 +21,7 @@
                 </h1>
                 @guest
                     <nav class="flex gap-2 items-center">
-                        <a class="font-bold uppercase text-gray-600" href="#">Login</a>
+                        <a class="font-bold uppercase text-gray-600" href="{{route('login')}}">Login</a>
                         <a class="font-bold uppercase text-gray-600" href="{{route('register')}}">Crear Cuenta</a>
                     </nav>
                 @endguest
